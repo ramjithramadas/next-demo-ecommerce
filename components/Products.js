@@ -169,7 +169,7 @@ const Products = () => {
         </Modal>
         </div>
       </Grid>
-      <Grid container spacing={4} item xs={12} sm={8}>
+      <Grid container spacing={4} item xs={12} sm={8} className={productsStyles.products}>
         {products.map((product, key) => {
           return (
             <Grid item xs={12} sm={4}>

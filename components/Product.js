@@ -17,10 +17,9 @@ import productsStyles from "../styles/Products/Products.module.scss";
 const useStyles = makeStyles((theme) => ({
   root: {
     maxWidth: 345,
-    maxHeight: 300,
   },
   media: {
-    height: 150,
+    height: 140,
   },
 
   modal: {
@@ -96,7 +95,7 @@ const Product = ({ id, title, description, img }) => {
   }, []);
   console.log("afetr",val);
   return (
-    <div className={productsStyles.product}>
+    
       <Card className={classes.root}>
         <CardActionArea>
           <CardMedia
@@ -184,7 +183,7 @@ const Product = ({ id, title, description, img }) => {
           ) : null}
         </CardActions>
       </Card>
-    </div>
+    
   );
 };
 

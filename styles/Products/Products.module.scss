@@ -31,9 +31,14 @@
   height: 90px;
 }
 
+
+
 @media (min-width: 300px) and (max-width: 499px) {
   .container {
-    margin-top: 30px;
+    margin-top: 450px;
     display: block;
+  }
+  .products{
+    display: contents;
   }
 }
