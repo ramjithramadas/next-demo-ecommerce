@@ -9,7 +9,6 @@ const WhiteTextTypography = withStyles({
     color: "#FFFFFF",
     marginTop: "20px",
   },
-  
 })(Typography);
 
 const HomePage = () => {
@@ -23,17 +22,21 @@ const HomePage = () => {
           <WhiteTextTypography variant="h4" className={homeStyles.root}>
             OF SHOPPING
           </WhiteTextTypography>
-          <Button variant="contained" color="secondary">
-            SHOP NOW
-          </Button>
+          <div className={homeStyles.mrgnSection}>
+            <Button variant="contained" color="secondary">
+              SHOP NOW
+            </Button>
+          </div>
         </Grid>
         <Grid item xs={6} className={homeStyles.rightSection}>
-          <Image
-            src="/ecommerce-main.png"
-            alt="Picture of the author"
-            width={550}
-            height={550}
-          />
+          <div className={homeStyles.mrgnSection}>
+            <Image
+              src="/ecommerce-main.png"
+              alt="Picture of the author"
+              width={550}
+              height={550}
+            />
+          </div>
         </Grid>
       </div>
     </Grid>

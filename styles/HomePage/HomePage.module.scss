@@ -2,7 +2,7 @@
   display: flex;
   justify-content: space-between;
   margin-top: 20px;
-  margin-bottom:20px ;
+  margin-bottom: 20px;
 }
 
 .leftSection {
@@ -41,9 +41,8 @@
   box-shadow: 1px 3px 8px 0 rgb(0, 0, 0);
 }
 
-
-@media (min-width: 300px) and (max-width: 499px){
-  .container{
+@media (min-width: 300px) and (max-width: 499px) {
+  .container {
     display: block;
     margin-top: 70px;
   }
@@ -54,10 +53,13 @@
   .leftHeading {
     margin-top: 20px;
   }
-  .leftSubHeading{
+  .leftSubHeading {
     margin-top: 20px;
   }
   .rightSection {
     margin: 20px;
+  }
+  .mrgnSection {
+    margin-top: 20px;
   }
 }

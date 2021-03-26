@@ -22,6 +22,7 @@ const useStyles = makeStyles((theme) => ({
     boxShadow: theme.shadows[5],
     padding: theme.spacing(2, 4, 3),
   },
+
 }));
 
 const theme = createMuiTheme();
@@ -81,13 +82,13 @@ const Products = () => {
   };
 
   const [val, setVal] = useState(false);
- 
+
   // console.log(val);
   useEffect(() => {
     if (localStorage.getItem("user")) {
-       setVal(true);
-      console.log("working")
-      console.log(val)
+      setVal(true);
+      console.log("working");
+      console.log(val);
     }
   }, [val]);
 
@@ -95,92 +96,97 @@ const Products = () => {
     <div className={productsStyles.container}>
       <Grid item xs={12} sm={4}>
         <div className={productsStyles.leftContent}>
-        <ThemeProvider theme={theme}>
-          <Typography variant="h4">TRENDING NOW</Typography>
-        </ThemeProvider>
+          <ThemeProvider theme={theme}>
+            <Typography variant="h4">TRENDING NOW</Typography>
+          </ThemeProvider>
 
-        <Typography variant="p" paragraph>
-          Lorem ipsum dolor sit,Nulla pellentesque dolor ipsum laoreet.
-        </Typography>
-        <Button variant="contained" color="secondary">
-          SHOP NOW
-        </Button>
-        {val ? (
-          <Button
-            variant="contained"
-            color="secondary"
-            type="button"
-            onClick={handleOpen}
-          >
-            ADD ITEM
+          <Typography variant="p" paragraph>
+            Lorem ipsum dolor sit,Nulla pellentesque dolor ipsum laoreet.
+          </Typography>
+          <Button variant="contained" color="secondary">
+            SHOP NOW
           </Button>
-        ) : null}
+          {val ? (
+            <Button
+              variant="contained"
+              color="secondary"
+              type="button"
+              onClick={handleOpen}
+            >
+              ADD ITEM
+            </Button>
+          ) : null}
 
-        <Modal
-          aria-labelledby="transition-modal-title"
-          aria-describedby="transition-modal-description"
-          className={classes.modal}
-          open={open}
-          onClose={handleClose}
-          closeAfterTransition
-          BackdropComponent={Backdrop}
-          BackdropProps={{
-            timeout: 500,
-          }}
-        >
-          <Fade in={open}>
-            <div className={classes.paper}>
-              <h2 id="transition-modal-title">Add Product</h2>
+          <Modal
+            aria-labelledby="transition-modal-title"
+            aria-describedby="transition-modal-description"
+            className={classes.modal}
+            open={open}
+            onClose={handleClose}
+            closeAfterTransition
+            BackdropComponent={Backdrop}
+            BackdropProps={{
+              timeout: 500,
+            }}
+          >
+            <Fade in={open}>
+              <div className={classes.paper}>
+                <h2 id="transition-modal-title">Add Product</h2>
 
-              <form
-                noValidate
-                autoComplete="off"
-                id="transition-modal-description"
-                onSubmit={formSubmit}
-              >
-                <TextField
-                  id="outlined-basic"
-                  label="Title"
-                  variant="outlined"
-                  onChange={handleChange}
-                  name="title"
-                  value={newProduct.title}
-                />
-                <TextField
-                  id="outlined-basic"
-                  label="Description"
-                  variant="outlined"
-                  name="description"
-                  onChange={handleChange}
-                  value={newProduct.description}
-                />
+                <form
+                  noValidate
+                  autoComplete="off"
+                  id="transition-modal-description"
+                  onSubmit={formSubmit}
+                >
+                  <TextField
+                    id="outlined-basic"
+                    label="Title"
+                    variant="outlined"
+                    onChange={handleChange}
+                    name="title"
+                    value={newProduct.title}
+                  />
+                  <TextField
+                    id="outlined-basic"
+                    label="Description"
+                    variant="outlined"
+                    name="description"
+                    onChange={handleChange}
+                    value={newProduct.description}
+                  />
 
-                <TextField
-                  name="upload-photo"
-                  type="file"
-                  onChange={handleImage}
-                />
-                <Button variant="contained" color="primary" type="submit">
-                  SAVE
-                </Button>
-              </form>
-            </div>
-          </Fade>
-        </Modal>
+                  <TextField
+                    name="upload-photo"
+                    type="file"
+                    onChange={handleImage}
+                  />
+                  <Button variant="contained" color="primary" type="submit">
+                    SAVE
+                  </Button>
+                </form>
+              </div>
+            </Fade>
+          </Modal>
         </div>
       </Grid>
-      <Grid container spacing={4} item xs={12} sm={8} className={productsStyles.products}>
+      <Grid
+        container
+        spacing={3}
+        item
+        xs={12}
+        sm={8}
+        className={productsStyles.products}
+      >
         {products.map((product, key) => {
           return (
             <Grid item xs={12} sm={4}>
-              
-                <Product
-                  id={key}
-                  title={product.title}
-                  description={product.description}
-                  img={product.img}
-                />
-              
+              <Product
+                id={key}
+                title={product.title}
+                description={product.description}
+                img={product.img}
+              />
             </Grid>
           );
         })}

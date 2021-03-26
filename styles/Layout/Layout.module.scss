@@ -6,7 +6,7 @@
 }
 
 .container {
-  height: 100vh;
+  height: 760px;
   width: 100%;
   padding: 0 10rem;
   background-color: #74d2e7;
@@ -20,20 +20,20 @@
 
 @media (min-width: 800px) and (max-width: 1024px) {
   .container {
-    height: 40vh;
+    height: 600px;
   }
 }
 
 @media (min-width: 500px) and (max-width: 799px){
   .container{
-    height: 60vh;
+    height: 600px;
     padding: 0 5rem;
   }
 }
 
 @media (min-width: 300px) and (max-width: 499px){
   .container{
-    height: 65vh;
+    height: 600px;
     padding: 0 0.5rem;
   }
   .main {
