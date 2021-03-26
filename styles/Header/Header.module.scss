@@ -1,0 +1,46 @@
+.root {
+  width: 100%;
+  background-color: #74d2e7;
+  padding: 10px 40px;
+  border-bottom: 1px solid #8bb4df;
+  padding-bottom: 0.5em;
+}
+
+.span {
+  color: #fff;
+  font-size: 2.4em;
+  font-weight: 700;
+  text-shadow: 3px 1px 3px rgb(81, 131, 160);
+}
+
+.items {
+  display: flex;
+  justify-content: space-between;
+}
+
+.title {
+  font-size: 1em;
+  margin: 0;
+  letter-spacing: 0px;
+  font-weight: 300;
+  padding: 3px 0;
+  border: none;
+}
+
+.labels {
+  text-transform: uppercase;
+  display: block;
+  font-size: 0.7em;
+  margin: 0;
+  color: #5b7a9a;
+  letter-spacing: 4px;
+  font-weight: 600;
+  text-shadow: 3px 1px 3px rgb(81, 131, 160);
+}
+
+
+@media (min-width: 300px) and (max-width: 499px){
+  .root{
+    
+  }
+}

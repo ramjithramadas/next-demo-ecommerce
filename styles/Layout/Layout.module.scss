@@ -1,0 +1,43 @@
+@mixin makeCenter() {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.container {
+  height: 100vh;
+  width: 100%;
+  padding: 0 10rem;
+  background-color: #74d2e7;
+  @include makeCenter();
+}
+
+.main {
+  margin-top: 100px;
+  width: 90%;
+}
+
+@media (min-width: 800px) and (max-width: 1024px) {
+  .container {
+    height: 40vh;
+  }
+}
+
+@media (min-width: 500px) and (max-width: 799px){
+  .container{
+    height: 60vh;
+    padding: 0 5rem;
+  }
+}
+
+@media (min-width: 300px) and (max-width: 499px){
+  .container{
+    height: 65vh;
+    padding: 0 0.5rem;
+  }
+  .main {
+    margin-top: 10px;
+    width: 90%;
+  }
+}
